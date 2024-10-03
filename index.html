@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="D:\PABLO\FP\CUATROVIENTOS\IAW\proyectos\PáginaWeb\scripts.js">
+    <style>
+        /* Estilos adicionales */
+        .jumbotron {
+            background-color: #f8f9fa;
+            padding: 4rem;
+        }
+        .footer {
+            padding: 2rem;
+            background-color: #f1f1f1;
+        }
+        #projects-container .card {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#inicio">Mi Portafolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Sobre mí</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#proyectos">Proyectos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección Sobre Mí -->
+    <section id="inicio">
+        <header class="jumbotron text-center">
+            <h1 class="display-4">Hola, soy [Tu Nombre]</h1>
+            <p class="lead">Soy un [tu profesión], apasionado por [tus intereses].</p>
+        </header>
+
+        <section class="container">
+            <h2>Estudios</h2>
+            <p>He estudiado [carrera/universidad] y me he especializado en [áreas de conocimiento].</p>
+
+            <h2>Intereses</h2>
+            <p>Me apasiona trabajar en [proyectos, tecnologías, temas de interés].</p>
+        </section>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="container mt-5">
+        <h1 class="text-center">Mis Proyectos</h1>
+        <input class="form-control mb-4" id="project-search" type="text" placeholder="Buscar proyectos...">
+        
+        <div class="row" id="projects-container">
+            <!-- Card Proyecto 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/proyecto1.jpg" class="card-img-top" alt="Proyecto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Proyecto 1</h5>
+                        <p class="card-text">Descripción corta del proyecto 1.</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProyecto1">Ver más</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Proyecto 1 -->
+            <div class="modal fade" id="modalProyecto1" tabindex="-1" role="dialog" aria-labelledby="modalLabel1" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalLabel1">Proyecto 1</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Detalles completos del proyecto 1.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Más tarjetas de proyectos aquí -->
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="container mt-5">
+        <h1 class="text-center">Contacto</h1>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo">
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Modal de confirmación -->
+    <div class="modal fade" id="modalConfirmacion" tabindex="-1" role="dialog" aria-labelledby="modalLabelConfirm" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabelConfirm">¡Gracias por tu mensaje!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Hemos recibido tu mensaje y te contactaremos pronto.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-light text-center">
+        <p>Desarrollado por [Tu Nombre] &copy; 2024</p>
+    </footer>
+
+    <!-- Referencias a scripts externos -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script> <!-- Archivo JS externo -->
+</body>
+</html>
+
+
